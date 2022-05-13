@@ -1,0 +1,26 @@
+CSG:
+  ✔ Add a new csg. @done(22-04-09 15:28)
+  ✔ Sync with the owner, and each member active csg @done(22-04-09 15:28)
+  ✔ Each memebr and the owner can pay monthly share. @done(22-04-11 16:40)
+    ✔ -> this will add an object to the transaction. @done(22-04-11 16:40)
+  ✔ Display all the csg for user. @done(22-04-11 16:40)
+Bills:
+  ✔ Add a new Bill @done(22-04-12 00:17)
+  ✔ Sync with the owner, and each member active bill. @done(22-04-12 00:17)
+  ✔ Each memebr can pay his money. @started(22-04-12 00:18) @done(22-04-12 00:37) @lasted(19m29s)
+    ✔ -> this will add an object to the transaction. @started(22-04-12 00:37) @done(22-04-12 01:20) @lasted(43m15s)
+  ✔ Display all the bill for user. @done(22-04-12 01:20)
+Profile:
+  ☐ Edit profile.
+  ✔ Add a new friends. @done(22-04-12 01:45)
+    ✔ -> when add friend should be added to both. @done(22-04-12 01:45)
+  ☐ Rate a user
+  ☐ Get user info.
+HomePage:
+  ☐ get lastest transactions for current user.
+
+
+
+
+
+

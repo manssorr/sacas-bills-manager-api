@@ -1,0 +1,29 @@
+{
+  "name": "qatta-app-backend-v2",
+  "version": "2.0.0",
+  "description": "A money follower and bill manager app",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
+  },
+  "engines": {
+    "node": "16.13.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@nastyox/rando.js": "^2.0.5",
+    "axios": "^0.27.2",
+    "body-parser": "^1.20.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "mongoose": "^6.2.10",
+    "mongoose-autopopulate": "^0.16.1",
+    "otp-generator": "^4.0.0",
+    "validator": "^13.7.0"
+  }
+}
