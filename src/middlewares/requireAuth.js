@@ -27,8 +27,7 @@ const auth = async (req, res, next) => {
       _id: userId,
       token,
     });
-
-    //
+    // token is dead 🪦
 
     if (!user) {
       throw new Error("ReqAuth/user not found");

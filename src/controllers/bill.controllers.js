@@ -16,17 +16,10 @@ class BillMethods {
         totalAmount,
       });
 
-      // Old way to add add new model to database
-      // const bill = new Bill({
-      //   name,
-      //   owner: user?._id,
-      //   allMembers,
-      //   totalAmount,
-      // });
-
-      // await bill.save();
-
-      const membersWithOwner = [...allMembers, { member: user?._id?.toString() }];
+      const membersWithOwner = [
+        ...allMembers,
+        { member: user?._id?.toString() },
+      ];
 
       // Update members
       membersWithOwner?.forEach(async ({ member }) => {

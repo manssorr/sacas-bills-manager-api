@@ -33,6 +33,8 @@ class UserMethods {
   };
 
   static addFriendByNum = async (req, res) => {
+    // apiUrl + url is dead 🪦
+
     try {
       const currentUser = req?.user;
       const { phoneNumber } = req?.body;
@@ -117,149 +119,6 @@ class UserMethods {
       });
     }
   };
-  // static removeFriend = async (req, res) => {
-  //   try {
-  //     const currentUser = req.user;
-  //     const { friendNumber } = req.body;
-
-  //     if (currentUser.phoneNumber === friendNumber) {
-  //       return res.status(400).send({
-  //         message: `❌ You can't add yourself as a friend!`,
-  //       });
-  //     }
-
-  //
-  //
-
-  //     const user = await User.findById(currentUser._id);
-  //     const friend = await User.findOne({
-  //       phoneNumber: friendNumber,
-  //     });
-
-  //     await user.friends.push({
-  //       firstName: friend.firstName,
-  //       lastName: friend.lastName,
-
-  //       userIBAN: friend.userIBAN,
-  //       bankName: friend.bankName,
-  //       bankAccount: friend.bankAccount,
-
-  //       phoneNumber: friend.phoneNumber,
-  //       email: friend.email,
-  //       avatar: friend.avatar,
-  //       rate: friend.rate,
-
-  //       id: friend._id,
-  //     });
-
-  //     await friend.friends.push({
-  //       firstName: user.firstName,
-  //       lastName: user.lastName,
-
-  //       userIBAN: user.userIBAN,
-  //       bankName: user.bankName,
-  //       bankAccount: user.bankAccount,
-
-  //       phoneNumber: user.phoneNumber,
-  //       email: user.email,
-  //       avatar: user.avatar,
-  //       rate: user.rate,
-
-  //       id: user._id,
-  //     });
-
-  //     //
-  //
-
-  //     await user.save();
-  //     await friend.save();
-  //     res.status(200).send({
-  //       message: "friend added",
-  //     });
-  //   } catch (e) {
-  //     res.status(500).send({
-  //       errors: e.message,
-  //       message: "error in adding friend",
-  //     });
-  //   }
-  // };
-  // static addFriend = async (req, res) => {
-  //   try {
-  //     const currentUser = req.user;
-  //     const { friendNumber } = req.body;
-
-  //     if (currentUser.phoneNumber === friendNumber) {
-  //       return res.status(400).send({
-  //         message: `❌ You can't add yourself as a friend!`,
-  //       });
-  //     }
-
-  //
-  //
-
-  //     const user = await User.findById(currentUser._id);
-  //     const friend = await User.findOne({
-  //       phoneNumber: friendNumber,
-  //     });
-
-  //     await user.friends.push({
-  //       firstName: friend.firstName,
-  //       lastName: friend.lastName,
-
-  //       userIBAN: friend.userIBAN,
-  //       bankName: friend.bankName,
-  //       bankAccount: friend.bankAccount,
-
-  //       phoneNumber: friend.phoneNumber,
-  //       email: friend.email,
-  //       avatar: friend.avatar,
-  //       rate: friend.rate,
-
-  //       id: friend._id,
-  //     });
-
-  //     await friend.friends.push({
-  //       firstName: user.firstName,
-  //       lastName: user.lastName,
-
-  //       userIBAN: user.userIBAN,
-  //       bankName: user.bankName,
-  //       bankAccount: user.bankAccount,
-
-  //       phoneNumber: user.phoneNumber,
-  //       email: user.email,
-  //       avatar: user.avatar,
-  //       rate: user.rate,
-
-  //       id: user._id,
-  //     });
-
-  //     //
-  //
-
-  //     await user.save();
-  //     await friend.save();
-  //     res.status(200).send({
-  //       message: "friend added",
-  //     });
-  //   } catch (e) {
-  //     res.status(500).send({
-  //       errors: e.message,
-  //       message: "error in adding friend",
-  //     });
-  //   }
-  // };
-
-  /*
-
-     [{
-      "rateValue": 5,
-      "userId": "627249a9c339b200d5536d35",
-    },]
-     bill
-     627249a9c339b200d5536d34
-  
-  */
 
   static rateUsers = async (req, res) => {
     try {

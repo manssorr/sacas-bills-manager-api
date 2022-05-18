@@ -20,6 +20,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+
 app.use(authRoutes);
 app.use("/user", userRouters);
 app.use("/csg", csgRouters);

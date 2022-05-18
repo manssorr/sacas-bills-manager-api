@@ -59,10 +59,14 @@ class CsgMethods {
               throw new Error("");
             }
             // Change the status of the member to paid
-            index.isPaid = true;
+            // ///////////////////////////////
+            // index.isPaid = true;
 
             // Update the member transactions history
             const memberToUpdate = await User.findById(userId);
+
+            console.log(memberToUpdate?.firstName);
+
             memberToUpdate?.transactions?.unshift({
               csgId: foundCsg?._id,
               name: foundCsg?.name,
@@ -71,6 +75,7 @@ class CsgMethods {
               type: "pay",
             });
 
+            await memberToUpdate.save();
             // Update the receiver transactions history
 
             const receiverToUpdate = await User.findById(foundCycle?.receiver);
@@ -81,6 +86,10 @@ class CsgMethods {
               amount: foundCsg?.monthlyShare,
               type: "receive",
             });
+
+            console.log(receiverToUpdate?.firstName);
+
+            await receiverToUpdate.save();
           }
         } catch (error) {
           isErrored = true;
@@ -90,7 +99,8 @@ class CsgMethods {
       });
 
       // Update isDone status
-      foundCycle.payCount += 1;
+      // ///////////////////////////////
+      // foundCycle.payCount += 1;
 
       // IF THIS IS THE LASR MEMEBER TO PAY END THIS CYCLE
       if (foundCycle?.payCount >= foundCycle?.members?.length - 1) {

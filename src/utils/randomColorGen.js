@@ -7,7 +7,7 @@ const defaultColors = [
   "#D1CFE2",
   "#7EC4CF",
 ];
-module.exports  = getRandomColor = (colorsArray = defaultColors) => {
+module.exports = getRandomColor = (colorsArray = defaultColors) => {
   const randomColor = rando(colorsArray).value;
   return randomColor;
 };

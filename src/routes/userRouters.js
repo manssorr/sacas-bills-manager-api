@@ -4,6 +4,9 @@ const requireAuth = require("../middlewares/requireAuth");
 
 const router = express.Router();
 
+
+
+
 router.put("/editUser", requireAuth, userController.editUser);
 router.post("/addFriend", requireAuth, userController.addFriendByNum);
 router.post("/userByNum", requireAuth, userController.byNum);

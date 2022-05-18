@@ -47,8 +47,6 @@ const userSchema = new Schema(
 
     email: {
       type: String,
-      // unique: true,
-      // required: true,
       trim: true,
       lowercase: true,
       validate(value) {
@@ -63,7 +61,7 @@ const userSchema = new Schema(
     },
     rateCount: {
       type: Number,
-      default: 4,
+      default: 0,
     },
     bankName: {
       type: String,
@@ -106,8 +104,6 @@ userSchema.methods.generateAuthToken = async function () {
     { userId: user._id.toString() },
     process.env.JWT_SECRET
   );
-
-  //
 
   user.token = token;
   await user.save();
